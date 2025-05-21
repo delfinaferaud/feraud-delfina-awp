@@ -78,11 +78,12 @@ window.addEventListener('DOMContentLoaded', function () {
   function obtenerFavoritos() {
     const favoritosDiv = document.querySelector('.favoritos');
 
-    if (!favoritosDiv) return;
+    // if (!favoritosDiv) return;
+    limpiarHTML(resultadoRecetas)
 
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) ?? [];
     if (favoritos.length) {
-      mostrarRecetas(favoritos, 'Your favorites');
+      mostrarRecetas(favoritos, 'Your favorite');
       return;
     }
 
