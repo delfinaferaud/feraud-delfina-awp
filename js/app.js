@@ -63,7 +63,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
       recetaCardBody.appendChild(recetaHeading);
       divButtons.appendChild(recetaButton);
-      divButtons.appendChild(btnFav(id, title, img, obtenerFavoritos));
+      divButtons.appendChild(
+        btnFav(id, title, img, obtenerFavoritos, actualizarBoton)
+      );
       recetaCardBody.appendChild(divButtons);
 
       recetaCard.appendChild(recetaImagen);
@@ -77,9 +79,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   function obtenerFavoritos() {
     const favoritosDiv = document.querySelector('.favoritos');
-
-    // if (!favoritosDiv) return;
-    limpiarHTML(resultadoRecetas)
+    limpiarHTML(resultadoRecetas);
 
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) ?? [];
     if (favoritos.length) {
@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     const noFavoritos = document.createElement('P');
-    noFavoritos.textContent = 'You didn\'t mark any recipes as favorites'
+    noFavoritos.textContent = "You didn't mark any recipes as favorites";
     noFavoritos.classList.add('fs-4', 'text-center', 'font-bold', 'mt-4');
     favoritosDiv.appendChild(noFavoritos);
   }
