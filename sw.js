@@ -1,6 +1,6 @@
 const cacheName = 'recipes-cache';
 const assets = [
-    "/feraud-delfina-awp",
+    "/pwa-parcial-2-dwn3ap-feraud-delfina",
     "/",
     "index.html",
     "js/script.js",
@@ -39,7 +39,7 @@ self.addEventListener('fetch',(event)=> {
             return fetch(requestToCache)
             .then((res) =>{
                 if(!res || res.status !== 200){
-                    return res; //error
+                    return res;
                 }
                 let responseToCache = res.clone();
                 caches.open(cacheName)

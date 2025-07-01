@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function () {
       recetaCardBody.appendChild(recetaHeading);
       divButtons.appendChild(recetaButton);
       divButtons.appendChild(
-        btnFav(id, title, img, obtenerFavoritos, actualizarBoton)
+        btnFav(id, title, img, obtenerFavoritos)
       );
       recetaCardBody.appendChild(divButtons);
 
