@@ -5,12 +5,13 @@ const assets = [
     "index.html",
     "js/script.js",
     "style.css",
-    'https://www.themealdb.com/api/json/v1/1/categories.php',
     "favoritos.html",
     "js/app.js",
     "js/receta.js",
     "js/utils.js",
-    "categoria-recetas.html"
+    "categoria-recetas.html",
+    "favoritos.html",
+    "receta.html"
 ]
 
 self.addEventListener('install', (event)=> {
