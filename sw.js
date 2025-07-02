@@ -9,9 +9,7 @@ const assets = [
     "js/app.js",
     "js/receta.js",
     "js/utils.js",
-    "categoria-recetas.html",
-    "favoritos.html",
-    "receta.html"
+    "categoria-recetas.html"
 ]
 
 self.addEventListener('install', (event)=> {
